@@ -1,4 +1,4 @@
-package org.generation.blogpessoal.model;
+package org.generation.blogPessoal.model;
 
 import java.util.Date;
 
@@ -11,6 +11,10 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+
+// 1. Crie uma model  coloque todos os atributos necessários + get seters+ anotações *OK*
+//2. Teste sua aplicação (verifique se a tabela foi criada no mysql workbench)  *OK*
+
 
 @Entity
 @Table(name = "postagem")
