@@ -12,27 +12,23 @@ import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
-// 1. Crie uma model  coloque todos os atributos necessários + get seters+ anotações *OK*
-//2. Teste sua aplicação (verifique se a tabela foi criada no mysql workbench)  *OK*
-
-
-@Entity
-@Table(name = "postagem")
+@Entity  // Determina entidade do JPA 
+@Table(name = "postagem")  // Essa entidade virara uma tabela de nome "postagem"
 public class Postagem {
 	
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Id   
+	@GeneratedValue(strategy = GenerationType.IDENTITY)  // VALOR QUE VAI SER GERADO COMO CHAVE ESTRANGEIRA DA CHAVE ID
 	private long id;
 	
-	@NotNull
-	@Size(min = 5, max = 100)
+	@NotNull  // NÃO PODE SER VAZIO 
+	@Size(min = 5, max = 100)  // MINIMO DE CARACTER E MAXIMO
 	private String titulo;
 	
 	@NotNull
 	@Size(min = 10, max = 500)
 	private String texto;
 	
-	@Temporal(TemporalType.TIMESTAMP)
+	@Temporal(TemporalType.TIMESTAMP)  // TEMPORAL DETERMINA A HORA QUE A POSTAGEM PASSOU EXATAMENTE 
 	private Date data = new java.sql.Date(System.currentTimeMillis());
 	
 	
