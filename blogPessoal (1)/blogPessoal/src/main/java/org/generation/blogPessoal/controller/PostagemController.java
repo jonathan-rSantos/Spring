@@ -17,13 +17,13 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController
-@RequestMapping("/postagem")
-@CrossOrigin("*")
+@RestController  // DEFINIR QUE É UM CONTROLER 
+@RequestMapping("/postagem") // CAMINHO PRA SAIDA
+@CrossOrigin("*") // ACEITAR QUALQUER API
 public class PostagemController {
 
 	
-	@Autowired
+	@Autowired  // INJETAR DE DEPENDENCIA, ASSIM ESSE REPOSITORIO É ACESSADO
 	private PostagemRepository repositoty;
 	
 

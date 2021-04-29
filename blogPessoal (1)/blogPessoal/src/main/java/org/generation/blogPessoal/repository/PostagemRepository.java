@@ -12,7 +12,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface PostagemRepository extends JpaRepository<Postagem, Long> {
 
-
 	public List<Postagem> findAllByTituloContainingIgnoreCase (String titulo);
 	
 	// 5. Teste o método findAll através do postman.  *OK*
