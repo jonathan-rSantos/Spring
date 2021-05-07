@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController  // DEFINIR QUE É UM CONTROLER 
-@RequestMapping("/postagem") // CAMINHO PRA SAIDA
+@RequestMapping("/postagens") // CAMINHO PRA SAIDA
 @CrossOrigin("*") // ACEITAR QUALQUER API
 public class PostagemController {
 
